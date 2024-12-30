@@ -1,6 +1,8 @@
 import os
 os.system('cls')
 
+#-----------------------------------------------#
+
 # class Car:
 #     def __init__(self, color, model):
 #         self.color = color
@@ -17,8 +19,7 @@ os.system('cls')
 # print(car2.print_details())
 # print(car3.print_details())
 
-
-
+#-----------------------------------------------#
 
 # class House:
 
@@ -41,4 +42,45 @@ os.system('cls')
 # del house1.country
 # print(house1.country)
 
+#-----------------------------------------------#
 
+#Inheritance
+
+class Person:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+
+    def fullname(self):
+        return self.firstname.title() + ' ' + self.lastname.title()
+
+
+class Student(Person):
+    def __init__(self, firstname, lastname, major, university):
+        super().__init__(firstname, lastname)
+        self.major = major
+        self.university = university
+
+    def fullname(self):
+        return f'{self.firstname} {self.lastname}. I am studing {self.major}'
+    
+    def education_info(self):
+        return f'{self.university}: {self.major} '
+
+
+class Teacher(Person):
+    def __init__(self, firstname, lastname, university, department):
+        super().__init__(firstname, lastname)
+        self.university = university
+        self.department = department
+    
+    def working_info(self):
+        return f'I am working in {self.university} at {self.department} department.'
+
+
+
+samira_stu = Student('samira', 'dorchalian' , 'Computer Engineering', 'Azad')
+print(samira_stu.fullname())
+
+arezoo_teacher = Teacher('Arezoo', 'dorchalian', 'Azad', 'Math')
+print(arezoo_teacher.fullname())
