@@ -46,41 +46,86 @@ os.system('cls')
 
 #Inheritance
 
-class Person:
-    def __init__(self, firstname, lastname):
-        self.firstname = firstname
-        self.lastname = lastname
+# class Person:
+#     def __init__(self, firstname, lastname):
+#         self.firstname = firstname
+#         self.lastname = lastname
 
-    def fullname(self):
-        return self.firstname.title() + ' ' + self.lastname.title()
+#     def fullname(self):
+#         return self.firstname.title() + ' ' + self.lastname.title()
 
+# class Student(Person):
+#     def __init__(self, firstname, lastname, major, university):
+#         super().__init__(firstname, lastname)
+#         self.major = major
+#         self.university = university
 
-class Student(Person):
-    def __init__(self, firstname, lastname, major, university):
-        super().__init__(firstname, lastname)
-        self.major = major
-        self.university = university
-
-    def fullname(self):
-        return f'{self.firstname} {self.lastname}. I am studing {self.major}'
+#     def fullname(self):
+#         return f'{self.firstname} {self.lastname}. I am studing {self.major}'
     
-    def education_info(self):
-        return f'{self.university}: {self.major} '
+#     def education_info(self):
+#         return f'{self.university}: {self.major} '
 
-
-class Teacher(Person):
-    def __init__(self, firstname, lastname, university, department):
-        super().__init__(firstname, lastname)
-        self.university = university
-        self.department = department
+# class Teacher(Person):
+#     def __init__(self, firstname, lastname, university, department):
+#         super().__init__(firstname, lastname)
+#         self.university = university
+#         self.department = department
     
-    def working_info(self):
-        return f'I am working in {self.university} at {self.department} department.'
+#     def working_info(self):
+#         return f'I am working in {self.university} at {self.department} department.'
 
+# samira_stu = Student('samira', 'dorchalian' , 'Computer Engineering', 'Azad')
+# print(samira_stu.fullname())
 
+# arezoo_teacher = Teacher('Arezoo', 'dorchalian', 'Azad', 'Math')
+# print(arezoo_teacher.fullname())
 
-samira_stu = Student('samira', 'dorchalian' , 'Computer Engineering', 'Azad')
-print(samira_stu.fullname())
+#-----------------------------------------------#
 
-arezoo_teacher = Teacher('Arezoo', 'dorchalian', 'Azad', 'Math')
-print(arezoo_teacher.fullname())
+# Polymorphism in object orientation
+
+# class Shape: #Abstrack Class
+
+#     pi = 3.14
+
+#     def __init__(self, kind, name):
+#         self.kind = kind
+#         self.name = name
+
+#     def area(self):
+#         raise NotImplementedError('All children of Shape class should redefind the area method')
+
+# class Circle(Shape):
+#     def __init__(self, kind, name, r):
+#         super().__init__(kind, name)
+#         self.radius = r
+
+#     def area(self): # OverRide
+#         return self.pi * (self.radius ** 2)
+
+# class Square(Shape):
+#     def __init__(self, kind, name, side_length):
+#         super().__init__(kind, name)
+#         self.side_length = side_length
+
+#     def area(self): # OverRide
+#         return self.side_length ** 2
+
+# def show_area(s):
+#     print(s.area())
+
+# square1 = Square('square', 'a', 10)
+# circle1 = Circle('circle', 'b', 10)
+# circle2 = Circle('circle', 'c', 4)
+# # print(square.area())
+# # print(circle.area())
+
+# # show_area(square)
+# # show_area(circle)
+
+# for shape in [square1, circle1, circle2]:
+#     show_area(shape)
+
+#-----------------------------------------------#
+
