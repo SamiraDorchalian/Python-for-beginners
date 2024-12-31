@@ -129,3 +129,48 @@ os.system('cls')
 
 #-----------------------------------------------#
 
+# Python Program to perform addition 
+# of two complex numbers using binary 
+# + operator overloading.
+
+# class complex:
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+
+#      # adding two objects 
+#     def __add__(self, other):
+#         # return self.a + other.a, self.b + other.b
+#         a = self.a + other.a
+#         b = self.b + other.b
+#         return complex(a, b)
+    
+#     def __str__(self):
+#         return f'{self.a}, {self.b}'
+
+# ob1 = complex(1, 2)
+# ob2 = complex(2, 3)
+# ob3 = ob1 + ob2
+# print(ob3)
+
+#-----------------------------------------------#
+
+# print(dir(0))
+
+#-----------------------------------------------#
+
+
+# class A(object):
+#     def __eq__(self, other):
+#         print("A __eq__ called: %r == %r ?" % (self, other))
+#         return self.value == other
+# class B(object):
+#     def __eq__(self, other):
+#         print("B __eq__ called: %r == %r ?" % (self, other))
+#         return self.value == other   
+
+# a = A()
+# a.value = 3
+# b = B()
+# b.value = 4
+# a == b
