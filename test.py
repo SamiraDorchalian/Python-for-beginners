@@ -197,3 +197,60 @@ os.system('cls')
 # cprint("Attention!", "yellow", attrs=["underline"], file=sys.stderr)
 
 #-----------------------------------------------#
+# Exception Handling & use raise
+
+# def calc_income(income):
+#     if income < 0:
+#         raise Exception('Income should not be a negetive number!')
+
+#     print('first')
+#     return income * 2
+
+# user_income = int(input('Enter your income: '))
+
+# try:
+#     print(calc_income(user_income))
+# except:
+#     print('EXCEPTION')
+
+# print('second')
+
+#-----------------------------------------------#
+# Exception Handling & use raise & assert
+
+
+# def calc_income(income):
+#     assert income >= 0, 'Income should not be a negetive number!'
+
+#     print('first')
+#     return income * 2
+
+# user_income = int(input('Enter your income: '))
+
+# try:
+#     print(calc_income(user_income))
+# except:
+#     print('EXCEPTION')
+
+# print('second')
+
+#-----------------------------------------------#
+# Exception Handling & use raise & assert - else - finally
+
+# a = 10
+# b = int(input('Enter a number: '))
+
+# try:
+#     b = c + 10    
+#     # print(b)
+
+# except ZeroDivisionError:
+#     print('Exception!')
+# except ModuleNotFoundError:
+#     print('another expetion!')
+# # except Exception:
+# #     print('some other error')
+# else:
+#     print('ELSE')
+# finally:
+#     print('Finaly')
