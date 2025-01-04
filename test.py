@@ -311,6 +311,7 @@ os.system('cls')
 
 #-----------------------------------------------#
 #Controlling files in Python
+# w: write, r: read, a: append
 
 #--------------------------
 #write
@@ -395,5 +396,15 @@ os.system('cls')
 
 # print(names)
 # print('END')
+
+#-----------------------------------------------#
+#append
+# f = open('names.txt', 'a')
+
+# f.write('another line')
+#---with, whit-----------
+
+# with open('names.txt', 'a')as names_file:
+#    names_file.write('\nThis is new')
 
 #-----------------------------------------------#
