@@ -310,4 +310,28 @@ os.system('cls')
 # print(f'Result: {result}')
 
 #-----------------------------------------------#
+#Controlling files in Python
 
+#--------------------------
+#write
+#file = open('names.txt', 'w')
+
+# file.write('samira\nDorchalian\n1998')
+
+#--------------------------
+# read from another file
+file = open('names.txt', 'r')
+# a = file.read()
+# print(a.split('\n'))
+# for line in a.split('\n'):
+#     print(f'Hello {line.title()}')
+# ---or---readlines()---------
+# print(file.readlines())
+# ---or---readline()----------
+while True:
+    line = file.readline()
+    print(line, end='')
+    if line == '':
+        break
+
+print('END')
