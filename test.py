@@ -256,7 +256,7 @@ os.system('cls')
 #     print('Finaly')
 
 #-----------------------------------------------#
-
+#Exception Handling
 # Creating arbitrary errors with the help of inheritance
 
 # class NegetiveIncomeError(Exception):
@@ -289,3 +289,25 @@ os.system('cls')
 #     print(e.message, e.age)
 
 #-----------------------------------------------#
+#Exception Handling
+
+# result = None
+
+# while True:
+#     user_input = input('Enter your number: ')
+
+#     try:
+#         result = int(user_input)
+#         break
+#     except ValueError:
+#         try:
+#             result = float(user_input)
+#             break
+#         except ValueError:
+#             print('You have to enter a number. Please try again.')
+
+# print(type(result))
+# print(f'Result: {result}')
+
+#-----------------------------------------------#
+
