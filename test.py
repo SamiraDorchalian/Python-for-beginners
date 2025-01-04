@@ -351,4 +351,35 @@ os.system('cls')
 
 #-----------------------------------------------#
 #close and how to close files
+#useing with
 
+# names_file = open('names.txt', 'r')
+
+# try:
+#     names = names_file.read()
+    
+#     names = names.split('\n')
+
+#     print(names)
+
+#     while True:
+#         user_input = input('Enter name: ')
+#         if user_input == 'exit':
+#             break
+#         names.append(user_input)
+#         print(names)
+# finally:
+#     names_file.close()
+
+#-----------------------------------------------#
+#useing with
+names = []
+
+with open('names.txt', 'r') as reader:
+    # print(reader.read())
+    for line in reader.read().split('\n'):
+        names.append(line)
+    print('something')
+
+print(names)
+print('END')
