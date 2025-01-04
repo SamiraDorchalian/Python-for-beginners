@@ -320,18 +320,35 @@ os.system('cls')
 
 #--------------------------
 # read from another file
-file = open('names.txt', 'r')
-# a = file.read()
-# print(a.split('\n'))
-# for line in a.split('\n'):
-#     print(f'Hello {line.title()}')
-# ---or---readlines()---------
-# print(file.readlines())
-# ---or---readline()----------
-while True:
-    line = file.readline()
-    print(line, end='')
-    if line == '':
-        break
+# file = open('names.txt', 'r')
+# # a = file.read()
+# # print(a.split('\n'))
+# # for line in a.split('\n'):
+# #     print(f'Hello {line.title()}')
+# # ---or---readlines()---------
+# # print(file.readlines())
+# # ---or---readline()----------
+# while True:
+#     line = file.readline()
+#     print(line, end='')
+#     if line == '':
+#         break
 
-print('END')
+# print('END')
+#---Coding practice-----------------------
+# names_file = open('names.txt', 'r')
+
+# names = names_file.read()
+# names = names.split('\n')
+# print(names)
+
+# while True:
+#     user_input = input('Enter name: ')
+#     if user_input == 'exit':
+#         break
+#     names.append(user_input)
+#     print(names)
+
+#-----------------------------------------------#
+#close and how to close files
+
