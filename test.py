@@ -254,3 +254,38 @@ os.system('cls')
 #     print('ELSE')
 # finally:
 #     print('Finaly')
+
+#-----------------------------------------------#
+
+# Creating arbitrary errors with the help of inheritance
+
+# class NegetiveIncomeError(Exception):
+#     pass
+
+# class  NegetiveAgeError(Exception):
+#     def __init__(self, message, age):
+#         self.message = message
+#         self.age = age
+
+# def check_age(age):
+#     if age < 0:
+#         raise NegetiveAgeError(f'Your age ({age}) can not be negetive.', age)
+#     return age * 2 
+
+# def check_income(num):
+#     if num < 0:
+#         raise NegetiveIncomeError('You income can not be negetive.')
+
+#     return num
+
+# # user_income = int(input('Enter your income: '))
+# # check_income(user_income)
+
+# user_age = int(input('Enter your age: '))
+
+# try:
+#     check_age(user_age)
+# except NegetiveAgeError as e:
+#     print(e.message, e.age)
+
+#-----------------------------------------------#
