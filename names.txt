@@ -1,7 +1,3 @@
 samira
-Dorchalian
-1998
-FrontEnd 
-& 
-BackEnd 
-developer
+dorchalian
+26

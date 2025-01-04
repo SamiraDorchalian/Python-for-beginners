@@ -317,6 +317,18 @@ os.system('cls')
 #file = open('names.txt', 'w')
 
 # file.write('samira\nDorchalian\n1998')
+#---or---writelines------------
+# file = open('names.txt', 'w')
+# file.write('hello')
+# file.writelines(['samira', 'dorchalian', 'developer'])
+#--------------------------
+# names = ['samira', 'dorchalian', '26']
+#---description-----------------------
+# if we don't put \n in last our words , Words stick together.
+# so we can fixed with map & fun lambda or use write & join
+#--------------------------
+# file.writelines(map(lambda name: name+'\n', names))
+# file.write('\n'.join(names))
 
 #--------------------------
 # read from another file
@@ -373,13 +385,15 @@ os.system('cls')
 
 #-----------------------------------------------#
 #useing with
-names = []
+# names = []
 
-with open('names.txt', 'r') as reader:
-    # print(reader.read())
-    for line in reader.read().split('\n'):
-        names.append(line)
-    print('something')
+# with open('names.txt', 'r') as reader:
+#     # print(reader.read())
+#     for line in reader.read().split('\n'):
+#         names.append(line)
+#     print('something')
 
-print(names)
-print('END')
+# print(names)
+# print('END')
+
+#-----------------------------------------------#
