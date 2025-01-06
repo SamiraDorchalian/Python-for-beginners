@@ -410,28 +410,28 @@ os.system('cls')
 #-----------------------------------------------#
 #Package TKinter
 
-import tkinter as tk
-# from tkinter import LEFT, BOTTOM
+# import tkinter as tk
+# # from tkinter import LEFT, BOTTOM
 
-window = tk.Tk()
-
+# window = tk.Tk()
 #---Button-------------------
 
 # def button_clicked():
 #     print('Clicked!')
-
-button = tk.Button(
-    master=window,
-    text='Click me!',
-    # command=button_clicked,
-    command=lambda: print('Clicked me is run')
-)
-button.pack()
-window.mainloop()
-
+#---or we can use lambda----------
+# button = tk.Button(
+#     master=window,
+#     text='Click me!',
+#     # command=button_clicked,
+#     command=lambda: print('Clicked me is run')
+# )
+# button.pack()
 #---StringVar--------------
 # text_var = tk.StringVar()
 #---Label-------------------
+# import tkinter as tk
+# window = tk.Tk()
+
 # text1 = tk.Label(
 #     master = window, 
 #     # text = 'Welcome',
@@ -449,8 +449,17 @@ window.mainloop()
 #     window,
 #     text='First Name: ',
 # )
+# first_name.pack()
+# last_name.pack()
+
+# window.mainloop()
 #---Input Entry----------------
 #---Contact Lable & Entry together with class StringVar----------------
+
+# import tkinter as tk
+# # from tkinter import LEFT, BOTTOM
+# window = tk.Tk()
+
 # user_input = tk.Entry(
 #     window,
 #     textvariable=text_var
@@ -458,5 +467,33 @@ window.mainloop()
 # name_text.pack(side=LEFT)
 # user_input.pack(side=LEFT)
 # text1.pack(side=LEFT)
-# first_name.pack()
-# last_name.pack()
+
+# window.mainloop()
+#----------
+import tkinter as tk
+
+window = tk.Tk()
+
+name_entry = tk.Entry(
+    window,
+)
+show_name_label = tk.Label(
+    window,
+)
+def button_clicked():
+    # print(name_entry.get())
+    show_name_label['text'] = name_entry.get()
+
+submit_button = tk.Button(
+    window,
+    text='Submit',
+    # command=lambda: print('clicked! ')
+    command=button_clicked,
+)
+
+
+name_entry.pack()
+submit_button.pack()
+show_name_label.pack()
+
+window.mainloop()
