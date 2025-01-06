@@ -470,30 +470,72 @@ os.system('cls')
 
 # window.mainloop()
 #----------
+# import tkinter as tk
+
+# window = tk.Tk()
+
+# name_entry = tk.Entry(
+#     window,
+# )
+# show_name_label = tk.Label(
+#     window,
+# )
+# def button_clicked():
+#     # print(name_entry.get())
+#     show_name_label['text'] = name_entry.get()
+
+# submit_button = tk.Button(
+#     window,
+#     text='Submit',
+#     # command=lambda: print('clicked! ')
+#     command=button_clicked,
+# )
+
+
+# name_entry.pack()
+# submit_button.pack()
+# show_name_label.pack()
+
+# window.mainloop()
+
+#----------
 import tkinter as tk
 
 window = tk.Tk()
 
-name_entry = tk.Entry(
+label_input_name = tk.Label(
+    window,
+    text='First Name: ',
+)
+entry_name = tk.Entry(
     window,
 )
-show_name_label = tk.Label(
+label_input_name.grid(row=0,column=0)
+entry_name.grid(row=0, column=1)
+
+
+label_input_last_name = tk.Label(
+    window,
+    text='Last Name: ',
+)
+entry_last_name = tk.Entry(
     window,
 )
-def button_clicked():
-    # print(name_entry.get())
-    show_name_label['text'] = name_entry.get()
+label_input_last_name.grid(row=1,column=0)
+entry_last_name.grid(row=1, column=1)
 
-submit_button = tk.Button(
+label_age = tk.Label(
     window,
-    text='Submit',
-    # command=lambda: print('clicked! ')
-    command=button_clicked,
+    text='age: '
 )
+entry_age = tk.Entry(
+    window,
+)
+label_age.grid(row=2,column=0)
+entry_age.grid(row=2,column=1)
 
 
-name_entry.pack()
-submit_button.pack()
-show_name_label.pack()
+
+
 
 window.mainloop()
