@@ -411,17 +411,32 @@ os.system('cls')
 #Package TKinter
 
 import tkinter as tk
+# from tkinter import LEFT, BOTTOM
 
 window = tk.Tk()
 
-text_var = tk.StringVar()
+#---Button-------------------
 
-#Label
-text1 = tk.Label(
-    master = window, 
-    # text = 'Welcome',
-    textvariable=text_var,
+# def button_clicked():
+#     print('Clicked!')
+
+button = tk.Button(
+    master=window,
+    text='Click me!',
+    # command=button_clicked,
+    command=lambda: print('Clicked me is run')
 )
+button.pack()
+window.mainloop()
+
+#---StringVar--------------
+# text_var = tk.StringVar()
+#---Label-------------------
+# text1 = tk.Label(
+#     master = window, 
+#     # text = 'Welcome',
+#     textvariable=text_var,
+# )
 # first_name = tk.Label(
 #     master = window, 
 #     text = 'Samira',
@@ -430,16 +445,18 @@ text1 = tk.Label(
 #     master = window, 
 #     text = 'Dorchalian',
 # )
-#Input Entry
-user_input = tk.Entry(
-    window,
-    textvariable=text_var
-)
-
-
-user_input.pack()
-text1.pack()
+# name_text = tk.Label(
+#     window,
+#     text='First Name: ',
+# )
+#---Input Entry----------------
+#---Contact Lable & Entry together with class StringVar----------------
+# user_input = tk.Entry(
+#     window,
+#     textvariable=text_var
+# )
+# name_text.pack(side=LEFT)
+# user_input.pack(side=LEFT)
+# text1.pack(side=LEFT)
 # first_name.pack()
 # last_name.pack()
-
-window.mainloop()
