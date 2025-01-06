@@ -414,22 +414,32 @@ import tkinter as tk
 
 window = tk.Tk()
 
+text_var = tk.StringVar()
+
 #Label
 text1 = tk.Label(
     master = window, 
-    text = 'Welcome',
+    # text = 'Welcome',
+    textvariable=text_var,
 )
-first_name = tk.Label(
-    master = window, 
-    text = 'Samira',
-)
-last_name = tk.Label(
-    master = window, 
-    text = 'Dorchalian',
+# first_name = tk.Label(
+#     master = window, 
+#     text = 'Samira',
+# )
+# last_name = tk.Label(
+#     master = window, 
+#     text = 'Dorchalian',
+# )
+#Input Entry
+user_input = tk.Entry(
+    window,
+    textvariable=text_var
 )
 
+
+user_input.pack()
 text1.pack()
-first_name.pack()
-last_name.pack()
+# first_name.pack()
+# last_name.pack()
 
 window.mainloop()
