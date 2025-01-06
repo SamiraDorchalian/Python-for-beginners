@@ -408,3 +408,28 @@ os.system('cls')
 #    names_file.write('\nThis is new')
 
 #-----------------------------------------------#
+#Package TKinter
+
+import tkinter as tk
+
+window = tk.Tk()
+
+#Label
+text1 = tk.Label(
+    master = window, 
+    text = 'Welcome',
+)
+first_name = tk.Label(
+    master = window, 
+    text = 'Samira',
+)
+last_name = tk.Label(
+    master = window, 
+    text = 'Dorchalian',
+)
+
+text1.pack()
+first_name.pack()
+last_name.pack()
+
+window.mainloop()
