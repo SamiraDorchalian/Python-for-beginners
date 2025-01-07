@@ -509,7 +509,7 @@ label_title = tk.Label(
     text='Enter your data',
 )
 label_title.grid(row=0, column=0, columnspan=2)
-
+#-------------
 label_input_name = tk.Label(
     window,
     text='First Name: ',
