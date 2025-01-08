@@ -1,19 +1,5 @@
 import tkinter as tk
 
-window = tk.Tk()
-
-lbl_calc_result = tk.Label(
-    master=window,
-    text='0',
-    width=30,
-    height=3,
-)
-
-lbl_calc_result.grid(row=0, column=0, columnspan=4)
-
-def insert_number_incalc_result(btn_text):
-    lbl_calc_result['text'] = btn_text
-
 calc_keys = [
     {
         'text':  '7',
@@ -81,8 +67,49 @@ calc_keys = [
     },
 ]
 
-calc_keys_objs = [] 
 
+window = tk.Tk()
+
+lbl_calc_result = tk.Label(
+    master=window,
+    text='0',
+    width=30,
+    height=3,
+)
+
+lbl_calc_result.grid(row=0, column=0, columnspan=4)
+
+# last_op_index = -1
+# last_dot_index = -1
+
+def insert_number_incalc_result(btn_text):
+    current = lbl_calc_result['text']
+
+    # global last_op_index, last_dot_index
+    if btn_text in ['+', '-', '*']:
+        # last_op_index = len(current)
+   
+    if btn_text == 'C':
+        lbl_calc_result['text'] = '0'
+        # last_op_index , last_dot_index = 0, 0
+    elif current == '0':
+        lbl_calc_result['text'] = btn_text
+    elif btn_text == '=':
+        result = f"{eval(current)}"
+        lbl_calc_result['text'] = result
+        # last_op_index , last_dot_index = 0, 0
+        # if '.' in result:
+            # last_dot_index = result.index('.')
+    # else:
+    elif btn_text == '.': # and not (last_dot_index > last_op_index or current[-1] == '.'):
+        lbl_calc_result['text'] += btn_text
+        # last_dot_index = len(current)
+    elif btn_text in ['+', '-', '*'] and current[-1] in ['+', '-', '*']:
+        lbl_calc_result['text'] = current[:-1] + btn_text
+    else:
+        lbl_calc_result['text'] += btn_text
+
+calc_keys_objs = [] 
 for calc_key_data in calc_keys:
     btn = tk.Button(
         master=window,
@@ -95,34 +122,5 @@ for calc_key_data in calc_keys:
 for i, calc_keys_obj in enumerate(calc_keys_objs):
     calc_keys_obj.grid(row=(i//4)+1, column=i%4, sticky='nsew')
 
-
-# btn_7 = tk.Button(
-#     master=window,
-#     text='7',
-#     command=lambda: print('7'),
-#     height=3,
-# )
-# btn_7.grid(row=1, column=0, sticky='nsew')
-# btn_8 = tk.Button(
-#     master=window,
-#     text='8',
-#     command=lambda: print('8'),
-#     height=3,
-# )
-# btn_8.grid(row=1, column=1, sticky='nsew')
-# btn_9 = tk.Button(
-#     master=window,
-#     text='9',
-#     command=lambda: print('9'),
-#     height=3,
-# )
-# btn_9.grid(row=1, column=2, sticky='nsew')
-# btn_plus = tk.Button(
-#     master=window,
-#     text='+',
-#     command=lambda: print('+'),
-#     height=3,
-# )
-# btn_plus.grid(row=1,column=3, sticky='nsew')
-
+window.title('Calculator')
 window.mainloop()
