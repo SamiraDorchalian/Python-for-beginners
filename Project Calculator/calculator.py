@@ -2,6 +2,8 @@ import tkinter as tk
 
 from Check_Number_Decimal import is_last_number_decimal
 
+window = tk.Tk()
+
 calc_keys = [
     {
         'text':  '7',
@@ -68,8 +70,6 @@ calc_keys = [
         'command': lambda: insert_number_incalc_result('='),
     },
 ]
-
-window = tk.Tk()
 
 lbl_calc_result = tk.Label(
     master=window,
