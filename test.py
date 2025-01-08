@@ -590,21 +590,51 @@ os.system('cls')
 # something()
 
 #--------------
-def run_function_for_n_times(n):
-    def inner_decorator(original_function):
-        def wrapper():
-            for i in range(n):
-                original_function()
-        return wrapper
-    return inner_decorator
+# def run_function_for_n_times(n):
+#     def inner_decorator(original_function):
+#         def wrapper():
+#             for i in range(n):
+#                 original_function()
+#         return wrapper
+#     return inner_decorator
 
-@run_function_for_n_times(3)
-def aaa():
-    print('AAA')
+# @run_function_for_n_times(3)
+# def aaa():
+#     print('AAA')
 
-@run_function_for_n_times(5)
-def bbb():
-    print('BBB')
+# @run_function_for_n_times(5)
+# def bbb():
+#     print('BBB')
 
-aaa()
-bbb()
+# aaa()
+# bbb()
+
+#--------------
+
+import functools
+
+def this_is_mine(input_function):
+    @functools.wraps(input_function)
+    def wrapper(*args, **kwargs):
+        print('This function is created by me')
+        input_function(*args, **kwargs)
+
+    return wrapper
+
+@this_is_mine
+def say_bay():
+    print('Bay')
+
+@this_is_mine
+def add_two_number(a, b):
+    return a + b
+    
+@this_is_mine
+def multipy_three_number(x, y, z):
+    return x * y * z
+
+print(say_bay)
+
+# say_bay()
+# print(add_two_number(1, 2))
+# print(multipy_three_number(1, 2, 3))
