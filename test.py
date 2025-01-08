@@ -499,59 +499,112 @@ os.system('cls')
 # window.mainloop()
 
 #----------
-import tkinter as tk
-from tkinter import E, W, N, S
+# import tkinter as tk
+# from tkinter import E, W, N, S
 
-window = tk.Tk()
+# window = tk.Tk()
 
-label_title = tk.Label(
-    window,
-    text='Enter your data',
-)
-label_title.grid(row=0, column=0, columnspan=2)
-#-------------
-label_input_name = tk.Label(
-    window,
-    text='First Name: ',
-)
-entry_name = tk.Entry(
-    window,
-    width=10,
-)
-label_input_name.grid(row=1,column=0, sticky=(W, ))
-entry_name.grid(row=1, column=1, sticky=(W, ))
-#-------------
-label_input_last_name = tk.Label(
-    window,
-    text='Last Name: ',
-    height=3,
-)
-entry_last_name = tk.Entry(
-    window,
-)
-label_input_last_name.grid(row=2,column=0, sticky=(W, ))
-entry_last_name.grid(row=2, column=1, sticky=(N, S))
-#-------------
-label_age = tk.Label(
-    window,
-    text='age: '
-)
-entry_age = tk.Entry(
-    window,
-    width=10,
-)
-label_age.grid(row=3,column=0, sticky=(W, ))
-entry_age.grid(row=3,column=1, sticky=(W, ))
-#-------------
-submit_button = tk.Button(
-    window,
-    text='Submit',
-)
-submit_button.grid(row=4,column=0, columnspan=2,sticky='ew') #ew => east & west
-# submit_button.grid(row=4,column=1, sticky='ew') 
-submit_button.grid(row=4,column=1, sticky=(E, W)) # import E= east-e & W= west-w from tkinter for using default sticky like tuple
-#north
-#east
-#west
-#south
-window.mainloop()
+# label_title = tk.Label(
+#     window,
+#     text='Enter your data',
+# )
+# label_title.grid(row=0, column=0, columnspan=2)
+# #-------------
+# label_input_name = tk.Label(
+#     window,
+#     text='First Name: ',
+# )
+# entry_name = tk.Entry(
+#     window,
+#     width=10,
+# )
+# label_input_name.grid(row=1,column=0, sticky=(W, ))
+# entry_name.grid(row=1, column=1, sticky=(W, ))
+# #-------------
+# label_input_last_name = tk.Label(
+#     window,
+#     text='Last Name: ',
+#     height=3,
+# )
+# entry_last_name = tk.Entry(
+#     window,
+# )
+# label_input_last_name.grid(row=2,column=0, sticky=(W, ))
+# entry_last_name.grid(row=2, column=1, sticky=(N, S))
+# #-------------
+# label_age = tk.Label(
+#     window,
+#     text='age: '
+# )
+# entry_age = tk.Entry(
+#     window,
+#     width=10,
+# )
+# label_age.grid(row=3,column=0, sticky=(W, ))
+# entry_age.grid(row=3,column=1, sticky=(W, ))
+# #-------------
+# submit_button = tk.Button(
+#     window,
+#     text='Submit',
+# )
+# submit_button.grid(row=4,column=0, columnspan=2,sticky='ew') #ew => east & west
+# # submit_button.grid(row=4,column=1, sticky='ew') 
+# submit_button.grid(row=4,column=1, sticky=(E, W)) # import E= east-e & W= west-w from tkinter for using default sticky like tuple
+# #north
+# #east
+# #west
+# #south
+# window.mainloop()
+
+#---Decorator--------------------------------------------#
+
+# def my_decorator(input_func):
+#     def wrapper():
+#         print('START')
+#         input_func()
+#         print('END')
+#     return wrapper
+# @my_decorator
+# def say_hello():
+#     print('$$Hello$$')
+# @my_decorator
+# def Say_good_morning():
+#     print('$$Good Morning$$')
+
+# say_hello()
+# Say_good_morning()
+
+#--------------
+
+# def decorator_something(input_something):
+#     def wrapper():
+#         input_something()
+#         input_something()
+#     return wrapper
+
+# @decorator_something
+# def something():
+#     a = 1 + 2
+#     print(f'Python is great! {a}')
+
+# something()
+
+#--------------
+def run_function_for_n_times(n):
+    def inner_decorator(original_function):
+        def wrapper():
+            for i in range(n):
+                original_function()
+        return wrapper
+    return inner_decorator
+
+@run_function_for_n_times(3)
+def aaa():
+    print('AAA')
+
+@run_function_for_n_times(5)
+def bbb():
+    print('BBB')
+
+aaa()
+bbb()
