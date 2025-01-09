@@ -427,7 +427,7 @@ os.system('cls')
 # )
 # button.pack()
 #---StringVar--------------
-# text_var = tk.StringVar()
+# text_var = tk.d()
 #---Label-------------------
 # import tkinter as tk
 # window = tk.Tk()
@@ -611,29 +611,29 @@ os.system('cls')
 
 #--------------
 
-import functools
+# import functools
 
-def this_is_mine(input_function):
-    @functools.wraps(input_function)
-    def wrapper(*args, **kwargs):
-        print('This function is created by me')
-        input_function(*args, **kwargs)
+# def this_is_mine(input_function):
+#     @functools.wraps(input_function)
+#     def wrapper(*args, **kwargs):
+#         print('This function is created by me')
+#         input_function(*args, **kwargs)
 
-    return wrapper
+#     return wrapper
 
-@this_is_mine
-def say_bay():
-    print('Bay')
+# @this_is_mine
+# def say_bay():
+#     print('Bay')
 
-@this_is_mine
-def add_two_number(a, b):
-    return a + b
+# @this_is_mine
+# def add_two_number(a, b):
+#     return a + b
     
-@this_is_mine
-def multipy_three_number(x, y, z):
-    return x * y * z
+# @this_is_mine
+# def multipy_three_number(x, y, z):
+#     return x * y * z
 
-print(say_bay)
+# print(say_bay)
 
 # say_bay()
 # print(add_two_number(1, 2))
