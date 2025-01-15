@@ -39,7 +39,7 @@ b2=Button(
     text='open file',
     command=open_file
 ).place(x=300,y=5)
-#Text
+#Text Part (write - show)
 entry=Text(
     master=root,
     height='33',
