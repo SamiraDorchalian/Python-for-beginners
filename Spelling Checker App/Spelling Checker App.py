@@ -29,5 +29,22 @@ entry_text=Entry(
 )
 entry_text.pack(pady=10)
 entry_text.focus()
+#Button
+button=Button(
+    master=root,
+    text='Check',
+    font=('arial',20,'bold'),
+    fg='white',
+    bg='red',
+)
+button.pack()
+#Label spell
+spell=Label(
+    master=root,
+    font=('poppins',20),
+    bg='#dae6f6',
+    fg='#364971',
+)
+spell.place(x=350,y=250)
 
 root.mainloop()
