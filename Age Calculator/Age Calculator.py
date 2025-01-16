@@ -9,7 +9,16 @@ root.title('Age Calculator')
 photo=PhotoImage(file='age.png')
 myimage=Label(image=photo)
 myimage.pack(padx=15,pady=15)
-#text
+#function
+def calculateAge():
+    today=date.today()
+    birthDate=date(int(yearEntry.get()),int(monthEntry.get()),int(dayEntry.get()))
+    age=today.year - birthDate.year-((today.month,today.day) < (birthDate.month,birthDate.day))
+    Label(
+       text=f'{nameValue.get()} your age is {age}',
+       font=30
+    ).place(x=300,y=500)
+#Text Labels
 Label(
     text='Name',
     font=23,
@@ -31,7 +40,7 @@ nameValue=StringVar()
 yearValue=StringVar()
 monthValue=StringVar()
 dayValue=StringVar()
-
+# Input Values
 nameEntry=Entry(
     master=root,
     textvariable=nameValue,
@@ -67,5 +76,15 @@ dayEntry=Entry(
     font=20
 )
 dayEntry.place(x=300,y=400)
+#Button
+Button(
+    text='Calculate Age',
+    font=20,
+    bg='black',
+    fg='white',
+    width=11,
+    height=2,
+    command=calculateAge,
+).place(x=300 , y=450)
 
 root.mainloop()
