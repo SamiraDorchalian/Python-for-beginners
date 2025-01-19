@@ -58,6 +58,14 @@ Label(f,font=('Lucida Calligraphy',15,'bold'),text='Coffee.......Rs.100/cup',fg=
 Label(f,font=('Lucida Calligraphy',15,'bold'),text='Juice.......Rs.20/glass',fg='black',bg='lightgreen',).place(x=10,y=200)
 Label(f,font=('Lucida Calligraphy',15,'bold'),text='Pancakes.......Rs.15/pack',fg='black',bg='lightgreen',).place(x=10,y=230)
 Label(f,font=('Lucida Calligraphy',15,'bold'),text='Eggs.......Rs.7/egg',fg='black',bg='lightgreen',).place(x=10,y=260)
+
+#BILL
+f2=Frame(root,bg='lightyellow',highlightbackground='black',highlightthickness=1,width=300,height=370)
+f2.place(x=690,y=118)
+
+Bill=Label(f2,text='Bill',font=('calibri',20),bg='lightyellow')
+Bill.place(x=120,y=10)
+
 #ENTRY WORK
 f1=Frame(master=root,bd=5,height=370,width=300,relief=RAISED,)
 f1.pack()
