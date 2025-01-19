@@ -4,6 +4,15 @@ root=Tk()
 root.geometry('1000x500')
 root.title('Bill Management')
 root.resizable(False,False)
+#function
+def Reset():
+    entry_dosa.delete(0,END)
+    entry_cookies.delete(0,END)
+    entry_tea.delete(0,END)
+    entry_coffee.delete(0,END)
+    entry_juice.delete(0,END)
+    entry_pancakes.delete(0,END)
+    entry_eggs.delete(0,END)
 #Label Header
 Label(text='BILL MANAGEMENT',bg='black',fg='white',font=('calibri',33),width='300',height='2',).pack()
 # MENU CARD
@@ -63,6 +72,8 @@ entry_juice.grid(row=5,column=1)
 entry_pancakes.grid(row=6,column=1)
 entry_eggs.grid(row=7,column=1)
 
-
+#buttons
+btn_reset=Button(f1, bd=5,fg='black', bg='lightblue',font=('ariel',16,'bold'),width=10,text='Reset',command=Reset)
+btn_reset.grid(row=8,column=0)
 
 root.mainloop()
