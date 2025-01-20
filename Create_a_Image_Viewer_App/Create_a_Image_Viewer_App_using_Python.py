@@ -7,8 +7,8 @@ from PIL import Image,ImageTk
 import os
 
 def showimage():
-    filename=filedialog.askopenfilename(
-        initialdir=os.getcwd(),
+    filename=filedialog.askopenfilename( #The tkinter.filedialog module provides classes and factory functions for creating file/directory selection windows.
+        initialdir=os.getcwd(), #Return a string representing the current working directory.
         title='Select image file', 
         filetypes=(
             ('JPG File','*.jpg'),
