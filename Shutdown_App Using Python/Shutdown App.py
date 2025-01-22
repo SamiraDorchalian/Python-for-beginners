@@ -5,6 +5,18 @@ root=Tk()
 root.title('Shotdown App')
 root.geometry('400x580')
 
+#functions
+def restarttime():
+    os.system('shutdown /r /t 30') #time 30 sec
+
+def restart():
+    os.system('shoutdown /r /t 1')
+
+def shutdown():
+    os.system('shutdown /s /t 1')
+
+def logout():
+    os.system('shutdown -1')
 
 #first button
 restart_time_button=PhotoImage(file='resert-time.png')
