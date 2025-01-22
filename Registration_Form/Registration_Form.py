@@ -5,6 +5,11 @@ root.title('Refisteation')
 root.geometry('600x470')
 root.resizable(False,False)
 
+#functin
+def register():
+    print('registered')
+
+#labels
 Label(
     root,
     text='Python Registration Form',
@@ -16,7 +21,7 @@ Label(text='Phone',font=23).place(x=100,y=200)
 Label(text='Gender',font=23).place(x=100,y=250)
 Label(text='Email',font=23).place(x=100,y=300)
 
-#entry
+#entrys
 nameValue=StringVar()
 phoneValue=StringVar()
 genderValue=StringVar()
@@ -31,4 +36,11 @@ nameEntry.place(x=200,y=150)
 phoneEntry.place(x=200,y=200)
 genderEntry.place(x=200,y=250)
 emailEntry.place(x=200,y=300)
+#check button
+checkValue=IntVar
+checkbtn=Checkbutton(text='remember me?',variable=checkValue)
+checkbtn.place(x=200,y=340)
+
+Button(text='Register',font=20,width=11,height=2,command=register).place(x=250,y=380)
+
 root.mainloop()
