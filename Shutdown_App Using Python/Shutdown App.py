@@ -3,7 +3,7 @@ import os
 
 root=Tk()
 root.title('Shotdown App')
-root.geometry('400x580')
+root.geometry('330x520')
 
 #functions
 def restarttime():
