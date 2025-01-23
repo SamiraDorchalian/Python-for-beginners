@@ -11,7 +11,7 @@ root.configure(bg='#0f1a2b')
 root.resizable(False,False)
 
 mixer.init()
-#function
+#functions
 def open_folder():
     path=filedialog.askdirectory()
     if path:
@@ -27,32 +27,32 @@ def play_song():
     mixer.music.load(playlist.get(ACTIVE))
     mixer.music.play()
     music.config(text=music_name[0:-4])
-#icon
+# icon
 image_icon=PhotoImage(file='logo.png')
 root.iconphoto(False,image_icon)
 
-Top=PhotoImage(file='')
+Top=PhotoImage(file='top.png')
 Label(root,image=Top,bg='#0f1a2b').pack()
 #logo
-Logo=PhotoImage(file='')
+Logo=PhotoImage(file='logo.png')
 Label(root,image=Logo,bg='#0f1a2b').place(x=65,y=115)
-#button
-play_button=PhotoImage(file='')
+# buttons
+play_button=PhotoImage(file='play.png')
 Button(root,image=play_button,bg='#0f1a2b',bd=0,command=play_song).place(x=100,y=400)
 
-stop_button=PhotoImage(file='')
+stop_button=PhotoImage(file='stop.png')
 Button(root,image=stop_button,bg='#0f1a2b',bd=0,command=mixer.music.stop).place(x=30,y=500)
 
-resume_button=PhotoImage(file='')
+resume_button=PhotoImage(file='resume.png')
 Button(root,image=resume_button,bg='#0f1a2b',bd=0,command=mixer.music.unpause).place(x=115,y=500)
 
-pause_button=PhotoImage(file='')
+pause_button=PhotoImage(file='pause.png')
 Button(root,image=pause_button,bg='#0f1a2b',bd=0,command=mixer.music.pause).place(x=200,y=500)
 #label
 music=Label(root,text='',font=('arial',15),fg='white',bg='#0f1a2b')
 music.place(x=150,y=340,anchor='center')
 #music
-Menu= PhotoImage(file='')
+Menu= PhotoImage(file='menu.png')
 Label(root,image=Menu,bg='#0f1a2b').pack(padx=10,pady=50,side=RIGHT)
 
 music_frame= Frame(root,bd=2,relief=RIDGE)
